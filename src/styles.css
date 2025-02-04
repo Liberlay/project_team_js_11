@@ -1,0 +1,43 @@
+::root {
+  --background: #1c1d20;
+  --background-alt: #242527;
+  --background-hero: #3b3b3b;
+  --accent: #ed3b44;
+  --primary: #fafafa;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+ul,
+ol,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+input,
+textarea,
+button {
+  border: none;
+  outline: none;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url(../fonts/Inter-Variable.ttf);
+}
