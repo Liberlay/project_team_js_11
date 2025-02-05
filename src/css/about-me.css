@@ -1,0 +1,66 @@
+/* Evgen Fedorchenko */
+
+.about-me-addition-title1 {
+  color: #ed3b44;
+}
+
+.abt-me-prof-pic {
+  display: flex;
+  width: 680px;
+  height: 700px;
+}
+
+.about-me-addition-title2 {
+  opacity: 0.4;
+}
+
+.about-me-title-container {
+    max-width: 680px;
+    max-height: 700px;
+}
+
+.about-me-title {
+  background-color: #444;
+  box-sizing: border-box;
+  width: 550px;
+  font-size: 700;
+}
+
+.accordion {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.accordion-item {
+  border-bottom: 1px solid #444;
+}
+
+.accordion-button {
+  background: #333;
+  color: #fff;
+  padding: 15px;
+  font-size: 1.2em;
+  text-align: left;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+  outline: none;
+  transition: background 0.3s ease;
+}
+
+.accordion-button:hover {
+  background: #555;
+}
+
+.accordion-content {
+  display: none;
+  padding: 15px;
+  background-color: #222;
+  color: #ccc;
+}
+
+.accordion-content.open {
+  display: block;
+}
+/* Evgen Fedorchenko */
