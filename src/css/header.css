@@ -1,0 +1,30 @@
+/*General*/
+* {
+  box-sizing: content-box;
+}
+
+p,
+h1 {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*Header*/
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.header {
+  position: absolute;
+  padding: 31px 16px;
+}
+
+.headerLogo {
+  height: 80px;
+  width: 80px;
+  border-radius: 18px;
+}
