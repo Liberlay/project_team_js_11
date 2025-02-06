@@ -1,66 +1,59 @@
 /* Evgen Fedorchenko */
 
-.about-me-addition-title1 {
+/* Upper part of About me Section */
+.abt-me-exeption-r {
   color: #ed3b44;
 }
 
-.abt-me-prof-pic {
-  display: flex;
-  width: 680px;
-  height: 700px;
-}
-
-.about-me-addition-title2 {
+.about-me-exeption-d {
   opacity: 0.4;
 }
 
-.about-me-title-container {
-    max-width: 680px;
-    max-height: 700px;
-}
-
-.about-me-title {
-  background-color: #444;
-  box-sizing: border-box;
-  width: 550px;
-  font-size: 700;
-}
-
-.accordion {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.accordion-item {
-  border-bottom: 1px solid #444;
-}
-
-.accordion-button {
-  background: #333;
-  color: #fff;
-  padding: 15px;
-  font-size: 1.2em;
-  text-align: left;
-  border: none;
+.about-me-upper-img {
   width: 100%;
-  cursor: pointer;
-  outline: none;
-  transition: background 0.3s ease;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  margin: 0 auto;
+  border-radius: 10px;
 }
 
-.accordion-button:hover {
-  background: #555;
+@media (max-width: 768px) {
+  .about-me-upper-img {
+    width: 343px;
+    height: 500px;
+  }
 }
 
-.accordion-content {
+/* Upper part of About me Section */
+
+.ac-panel {
   display: none;
-  padding: 15px;
-  background-color: #222;
+  padding: 10px;
+  background: #222;
   color: #ccc;
+  border-top: 1px solid #444;
 }
 
-.accordion-content.open {
+.ac-panel.open {
   display: block;
 }
+
+.ac-trigger {
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.ac-trigger svg {
+  width: 12px;
+  height: 12px;
+  transition: transform 0.3s ease;
+}
+
+.ac-trigger.open svg {
+  transform: rotate(180deg);
+}
+
 /* Evgen Fedorchenko */
