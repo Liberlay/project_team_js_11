@@ -1,8 +1,8 @@
 /* Evgen Fedorchenko */
 
 /* Upper part of About me Section */
-.about-me-section {
-  margin-top: 64px;
+.container {
+  margin: 64px 16px;
 }
 
 .about-me-title {
@@ -178,3 +178,54 @@
 }
 
 /* Evgen Fedorchenko */
+
+/* Danyil Shevchenko */
+
+.swiper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.swiper-wrapper {
+  display: flex;
+  list-style: none;
+}
+
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 50%;
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  min-width: 130px;
+  max-width: 130px;
+  height: 130px;
+  color: var(--primary);
+  transition: 0.5s;
+}
+
+.swiper-slide-active {
+  background-color: var(--accent);
+}
+
+.swiper svg {
+  width: 40px;
+  height: 40px;
+  fill: transparent;
+  stroke: var(--background-hero);
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.swiper svg:hover {
+  stroke: var(--accent);
+}
+
+.swiper-button-next {
+  position: absolute;
+  right: 0;
+}
+/* Danyil Shevchenko */
