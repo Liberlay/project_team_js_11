@@ -4,7 +4,7 @@
 import Accordion from 'accordion-js';
 import 'accordion-js/dist/accordion.min.css';
 
-document.querySelectorAll('.ac-trigger').forEach(button => {
+document.querySelectorAll('.about-me-button-down').forEach(button => {
   button.addEventListener('click', () => {
     const panel = button.closest('li').querySelector('.ac-panel');
     const isOpen = panel.classList.contains('open');
@@ -12,7 +12,7 @@ document.querySelectorAll('.ac-trigger').forEach(button => {
     document.querySelectorAll('.ac-panel').forEach(otherPanel => {
       otherPanel.classList.remove('open');
       otherPanel.previousElementSibling
-        .querySelector('.ac-trigger')
+        .querySelector('.about-me-button-down')
         .classList.remove('open');
     });
 
@@ -23,7 +23,7 @@ document.querySelectorAll('.ac-trigger').forEach(button => {
   });
 });
 
-const accordionAbout = new Accordion('.about-me-summary', {
+const accordionAbout = new Accordion('accordion-container-about', {
   duration: 700,
   showMultiple: true,
 });

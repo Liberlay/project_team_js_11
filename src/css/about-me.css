@@ -1,37 +1,158 @@
 /* Evgen Fedorchenko */
 
 /* Upper part of About me Section */
-.abt-me-exeption-r {
+.about-me-section {
+  margin-top: 64px;
+}
+
+.about-me-title {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.about-me-bg-text {
+  margin-bottom: 16px;
+  padding: 32px 32px 220px 32px;
+  width: 100%;
+  height: 500px;
+  border-radius: 24px;
+
+  background-color: #242527;
+}
+
+.about-me-text {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: calc(28 / 24);
+  letter-spacing: -0.03em;
+  text-align: left;
+  text-transform: uppercase;
+  color: #fafafa;
+}
+
+.about-me-red {
   color: #ed3b44;
 }
 
-.about-me-exeption-d {
-  opacity: 0.4;
+.about-me-grey {
+  color: #fafafa66;
 }
 
-.about-me-upper-img {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-  margin: 0 auto;
-  border-radius: 10px;
-}
-
-@media (max-width: 768px) {
-  .about-me-upper-img {
-    width: 343px;
-    height: 500px;
-  }
+.about-me-foto {
+  margin-bottom: 32px;
+  border-radius: 24px;
 }
 
 /* Upper part of About me Section */
+.accordion-container-about .underline {
+  position: relative;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #fafafa66;
+}
+
+.underline:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.underline:last-child {
+  margin-bottom: 32px;
+}
+
+.accordion-container-about .ac {
+  margin-top: 0;
+  border-top: transparent;
+  border-right: transparent;
+  border-left: transparent;
+  background-color: transparent;
+}
+
+.accordion-container-about .ac .ac-trigger {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  width: 36px;
+  height: 36px;
+
+  border-radius: 50%;
+  border: 1px solid #fafafa66;
+}
+
+.accordion-container-about > .ac .ac-trigger::after {
+  display: none;
+}
+
+.accordion-container-about .ac .ac-trigger {
+  padding: 0;
+}
+.is-active .about-me-svg {
+  transform: rotate(180deg);
+}
+
+.about-me-svg {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+
+  width: 18px;
+  height: 18px;
+}
+
+.about-me-summary-title,
+.about-me-expirience-title,
+.about-me-education-title {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+
+  font-size: 16px;
+  font-weight: 600;
+  line-height: calc(24 / 16);
+  letter-spacing: -0.02em;
+  text-align: left;
+  text-transform: uppercase;
+  color: #fafafa66;
+}
+
+.about-me-summary-description {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: calc(24 / 16);
+  letter-spacing: -0.02em;
+  text-align: left;
+  color: #fafafa;
+}
+
+.about-me-summary-indent {
+  margin-bottom: 32px;
+}
+
+.about-me-expirience-list-item,
+.about-me-education-list-item {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: calc(24 / 16);
+  letter-spacing: -0.02em;
+  text-align: left;
+  color: #fafafa;
+}
+
+.about-me-expirience-list-item:not(:last-child),
+.about-me-education-list-item:not(:last-child) {
+  margin-bottom: 10px;
+}
 
 .ac-panel {
   display: none;
   padding: 10px;
-  background: #222;
-  color: #ccc;
   border-top: 1px solid #444;
 }
 
