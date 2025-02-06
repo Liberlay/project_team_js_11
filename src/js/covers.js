@@ -14,17 +14,17 @@ const covers = [
 const image = covers
   .map(
     ({ id, alt }) =>
-      `<li class="list-item">
+      `<li class="covers-item">
        <a href="https://goit.global/ua/" target="_blank">
         <picture class="covers-img">
           <source
             media="(min-width:320px)"
-            srcset="/images/covers/${id}.webp 1x, /images/covers/${id}_2x.webp 2x"
+            srcset="./images/covers/${id}.webp 1x, ./images/covers/${id}_2x.webp 2x"
             type="image/webp"
           />
           <img
             class="covers-img"
-            src="/images/covers/${id}.webp"
+            src="./images/covers/${id}.webp"
             alt="${alt}"
             loading="lazy"
           />
@@ -34,7 +34,7 @@ const image = covers
   )
   .join('');
 
-const items = document.querySelectorAll('.item');
+const items = document.querySelectorAll('.covers-wrapper');
 
 function shuffleArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
