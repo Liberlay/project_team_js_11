@@ -1,12 +1,12 @@
-@import url('./css/header.css');
-@import url('./css/hero.css');
-@import url('./css/about-me.css');
-@import url('./css/benefits.css');
-@import url('./css/projects.css');
-@import url('./css/faq.css');
-@import url('./css/covers.css');
-@import url('./css/reviews.css');
-@import url('./css/work-together.css');
+@import url('/css/header.css');
+@import url('/css/hero.css');
+@import url('/css/about-me.css');
+@import url('/css/benefits.css');
+@import url('/css/projects.css');
+@import url('/css/faq.css');
+@import url('/css/covers.css');
+@import url('/css/reviews.css');
+@import url('/css/work-together.css');
 
 :root {
   --background: #1c1d20;
@@ -29,6 +29,7 @@ body {
 ul,
 ol,
 li {
+  list-style: none;
   margin: 0;
   padding: 0;
 }
@@ -60,5 +61,5 @@ svg {
 
 @font-face {
   font-family: 'Inter';
-  src: url(../fonts/Inter-Variable.ttf);
+  src: url(/fonts/Inter-Variable.ttf);
 }
