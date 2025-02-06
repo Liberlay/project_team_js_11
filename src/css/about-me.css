@@ -1,0 +1,59 @@
+/* Evgen Fedorchenko */
+
+/* Upper part of About me Section */
+.abt-me-exeption-r {
+  color: #ed3b44;
+}
+
+.about-me-exeption-d {
+  opacity: 0.4;
+}
+
+.about-me-upper-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .about-me-upper-img {
+    width: 343px;
+    height: 500px;
+  }
+}
+
+/* Upper part of About me Section */
+
+.ac-panel {
+  display: none;
+  padding: 10px;
+  background: #222;
+  color: #ccc;
+  border-top: 1px solid #444;
+}
+
+.ac-panel.open {
+  display: block;
+}
+
+.ac-trigger {
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.ac-trigger svg {
+  width: 12px;
+  height: 12px;
+  transition: transform 0.3s ease;
+}
+
+.ac-trigger.open svg {
+  transform: rotate(180deg);
+}
+
+/* Evgen Fedorchenko */
