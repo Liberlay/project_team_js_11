@@ -7,7 +7,6 @@
 .benefits {
     max-width: 375px;
     min-width: 320px;
-    padding: 0 20px;
     margin: 0 auto;
 }
 
@@ -109,7 +108,6 @@
     }
 
     .benefits {
-        padding: 0 32px;
         min-width: 768px;
     }
 
@@ -150,11 +148,15 @@
         display: flex;
         align-items: flex-start;
         flex-direction: column;
-        margin-left: 672px;
+        margin-left: 736px;
     }
 
     .benefits-list {
         margin-top: -52px;
+    }
+
+    .benefits-item:hover {
+        box-shadow: 0 0 5px #E0373F, 0 0 10px #E0373F;
     }
 
     .benefits-button:hover {
