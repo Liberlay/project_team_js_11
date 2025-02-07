@@ -19,11 +19,11 @@ const image = covers
         <picture class="covers-img">
           <source
             media="(min-width:320px)"
-            srcset="/images/covers/${id}.webp 1x, /images/covers/${id}_2x.webp 2x"
+            srcset="images/covers/${id}.webp 1x, images/covers/${id}_2x.webp 2x"
           />
           <img
             class="covers-img"
-            src="/images/covers/${id}.webp"
+            src="images/covers/${id}.webp"
             alt="${alt}"
           />
         </picture>
