@@ -33,7 +33,7 @@
 
 // Danyil Shevchenko
 import Swiper from 'swiper';
-import { Navigation, Keyboard, Mousewheel } from 'swiper/modules';
+import { Keyboard, Mousewheel, Navigation } from 'swiper/modules';
 
 const swiper = new Swiper('.about-me-slider', {
   modules: [Navigation, Keyboard, Mousewheel],
@@ -43,7 +43,7 @@ const swiper = new Swiper('.about-me-slider', {
   slideActiveClass: 'about-me-slider-slide-active',
   slidesPerView: 2,
   grabCursor: true,
-  rewind: true,
+  loop: true,
   navigation: {
     enabled: true,
     nextEl: '.about-me-slider-button-next',
@@ -53,6 +53,14 @@ const swiper = new Swiper('.about-me-slider', {
   },
   mousewheel: {
     enabled: true,
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: 3,
+    },
+    1440: {
+      slidesPerView: 6,
+    },
   },
 });
 // Danyil Shevchenko
