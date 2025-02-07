@@ -1,14 +1,17 @@
-import { defineConfig } from 'vite';
 import { glob } from 'glob';
+import { join } from 'path';``
+import { defineConfig, loadEnv } from 'vite';
 import injectHTML from 'vite-plugin-html-inject';
 import FullReload from 'vite-plugin-full-reload';
 import SortCss from 'postcss-sort-media-queries';
 
-export default defineConfig(({ command }) => {
+export default defineConfig(({ command, mode }) => {
+  Object.assign(process.env, loadEnv(mode, join(process.cwd(), 'src')))
   return {
     define: {
       [command === 'serve' ? 'global' : '_global']: {},
     },
+    base: process.env.VITE_BASE_URL || '/',
     root: 'src',
     publicDir: '../static',
     build: {
