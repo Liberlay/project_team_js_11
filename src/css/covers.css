@@ -2,7 +2,7 @@
   background-color: rgba(217, 217, 217, 4%);
   max-width: 375px;
   height: 508px;
-  background-image: url(./images/covers/bg.png);
+  background-image: url(/images/covers/bg.png);
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
@@ -91,18 +91,18 @@
 
 @media (min-resolution: 192dpi) {
   .covers {
-    background-image: url(./images/covers/bg_2x.png);
+    background-image: url(/images/covers/bg_2x.png);
   }
 }
 
 @media (min-resolution: 192dpi) and (min-width: 768px) {
   .covers {
-    background-image: url(./images/covers/bg_2x.png);
+    background-image: url(/images/covers/bg_2x.png);
   }
 }
 
 @media (min-resolution: 192dpi) and (min-width: 1440px) {
   .covers {
-    background-image: url(./images/covers/bg_2x.png);
+    background-image: url(/images/covers/bg_2x.png);
   }
 }
