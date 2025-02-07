@@ -3,11 +3,11 @@ import{S as n,N as a,K as c,M as d}from"./assets/vendor-CIlSHZRv.js";(function()
         <picture class="covers-img">
           <source
             media="(min-width:320px)"
-            srcset="/images/covers/${e}.webp 1x, /images/covers/${e}_2x.webp 2x"
+            srcset="images/covers/${e}.webp 1x, images/covers/${e}_2x.webp 2x"
           />
           <img
             class="covers-img"
-            src="/images/covers/${e}.webp"
+            src="images/covers/${e}.webp"
             alt="${r}"
           />
         </picture>
