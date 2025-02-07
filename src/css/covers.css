@@ -1,13 +1,26 @@
 .covers {
+  position: relative;
   background-color: rgba(217, 217, 217, 4%);
   max-width: 375px;
   height: 508px;
-  background-image: url(/images/covers/bg.png);
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   overflow: hidden;
   margin: 0 auto;
+}
+
+.covers::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  filter: blur(25px);
+  background-image: url(/images/covers/bg.png);
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: 60% center;
+  z-index: -1;
 }
 
 .visually-hidden {
@@ -90,19 +103,19 @@
 }
 
 @media (min-resolution: 192dpi) {
-  .covers {
+  .covers::after {
     background-image: url(/images/covers/bg_2x.png);
   }
 }
 
 @media (min-resolution: 192dpi) and (min-width: 768px) {
-  .covers {
+  .covers::after {
     background-image: url(/images/covers/bg_2x.png);
   }
 }
 
 @media (min-resolution: 192dpi) and (min-width: 1440px) {
-  .covers {
+  .covers::after {
     background-image: url(/images/covers/bg_2x.png);
   }
 }
