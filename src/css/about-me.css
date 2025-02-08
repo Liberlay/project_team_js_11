@@ -1,11 +1,16 @@
 /* Evgen Fedorchenko */
 
-/* Upper part of About me Section */
-
-.about-me {
-  margin: 64px 16px;
+/* Svg Rotation */
+.about-me-svg {
+  transition: transform 0.3s ease; /* Плавный переход */
 }
 
+.rotated {
+  transform: rotate(180deg); /* Поворот на 180 градусов */
+}
+/* Svg Rotation */
+
+/* Upper part of About me Section */
 .about-me-title {
   position: absolute;
   width: 1px;
@@ -37,6 +42,7 @@
   letter-spacing: -0.03em;
   text-align: left;
   text-transform: uppercase;
+
   color: #fafafa;
 }
 
@@ -53,7 +59,129 @@
   border-radius: 24px;
 }
 
+@media screen and (min-width: 320px) {
+  .about-me-foto {
+    width: 320px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 24px;
+  }
+}
+
+@media screen and (min-width: 370px) {
+  .about-me {
+    margin: 0 auto;
+  }
+
+  .about-me-bg-text {
+    padding: 32px 32px 272px 32px;
+  }
+  .about-me-foto {
+    width: 343px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 24px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .about-me-bg-text {
+    padding: 64px 64px 436px 64px;
+    max-width: 704px;
+    height: 700px;
+  }
+
+  .about-me-foto {
+    width: 704px;
+    height: 700px;
+    object-fit: cover;
+    border-radius: 24px;
+  }
+
+  .about-me-text {
+    font-size: 38px;
+    line-height: calc(40 / 38);
+  }
+
+  .underline {
+    padding-bottom: 32px;
+  }
+
+  .underline:not(:last-child) {
+    margin-bottom: 32px;
+  }
+
+  .underline:last-child {
+    margin-bottom: 64px;
+  }
+
+  .about-me-button-up,
+  .about-me-button-down {
+    width: 40px;
+    height: 40px;
+  }
+
+  .about-me-svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .flex-container {
+    display: flex;
+    margin-bottom: 32px;
+  }
+
+  .about-me-bg-text {
+    margin-right: 16px;
+    margin-bottom: 0;
+    padding: 64px 64px 436px 64px;
+    width: 680px;
+  }
+
+  .about-me-foto {
+    margin-bottom: 0;
+    border-radius: 24px;
+    width: 680px;
+    height: 700px;
+  }
+
+  .underline:first-child {
+    margin-top: 96px;
+  }
+
+  .underline:not(:last-child) {
+    margin-bottom: 32px;
+  }
+
+  .underline:last-child {
+    margin-bottom: 96px;
+  }
+
+  .about-me-outline {
+    margin-left: 696px;
+  }
+
+  .about-me-summary-description {
+    width: 612px;
+  }
+
+  .about-me-summary-indent {
+    margin-bottom: 16px;
+  }
+}
+
 /* Upper part of About me Section */
+
+/* Accordion menu */
+
+.accordion-container-about {
+  display: flex;
+  flex-direction: column;
+
+}
+
 .accordion-container-about .underline {
   position: relative;
   padding-bottom: 20px;
@@ -86,7 +214,6 @@
   border-radius: 50%;
   border: 1px solid #fafafa66;
 }
-
 .accordion-container-about > .ac .ac-trigger::after {
   display: none;
 }
@@ -152,115 +279,57 @@
   margin-bottom: 10px;
 }
 
-.ac-panel {
-  display: none;
-  padding: 10px;
-  border-top: 1px solid #444;
-}
-
-.ac-panel.open {
-  display: block;
-}
-
-.ac-trigger {
-  background: none;
-  border: none;
-  cursor: pointer;
-  outline: none;
-}
-
-.ac-trigger svg {
-  width: 12px;
-  height: 12px;
-  transition: transform 0.3s ease;
-}
-
-.ac-trigger.open svg {
-  transform: rotate(180deg);
-}
+/* Accordion menu */
 
 /* Evgen Fedorchenko */
 
 /* Danyil Shevchenko */
 
-.about-me-slider-container {
+.swiper {
   position: relative;
-}
-
-.about-me-slider {
   display: flex;
   align-items: center;
-  width: 260px;
   overflow: hidden;
-
 }
 
-.about-me-slider-wrapper {
+.swiper-wrapper {
   display: flex;
   list-style: none;
 }
 
-.about-me-slider-slide {
+.swiper-slide {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
   border-radius: 50%;
   border: 1px solid rgba(250, 250, 250, 0.2);
-  width: 130px;
-  width: 130px;
+  min-width: 130px;
+  max-width: 130px;
   height: 130px;
   color: var(--primary);
   transition: 0.5s;
 }
 
-.about-me-slider-slide-active {
+.swiper-slide-active {
   background-color: var(--accent);
 }
 
-.about-me-slider svg {
-  width: 25px;
-  height: 25px;
+.swiper svg {
+  width: 40px;
+  height: 40px;
   fill: transparent;
   stroke: var(--background-hero);
   cursor: pointer;
   transition: 0.5s;
 }
 
-.about-me-slider svg:hover {
+.swiper svg:hover {
   stroke: var(--accent);
 }
 
-.about-me-slider-button-next {
+.swiper-button-next {
   position: absolute;
   right: 0;
 }
-
-@media (min-width: 768px) {
-  .about-me-slider {
-    width: 600px;
-  }
-
-  .about-me-slider-slide {
-    width: 200px;
-    height: 200px;
-  }
-
-  .about-me-slider svg {
-    width: 40px;
-    height: 40px;
-  }
-}
-
-@media (min-width: 1440px) {
-  .about-me-slider {
-    width: 1200px;
-  }
-
-  .about-me-slider-slide {
-    width: 200px;
-    height: 200px;
-  }
-}
-
 /* Danyil Shevchenko */
