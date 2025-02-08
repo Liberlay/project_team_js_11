@@ -28,24 +28,34 @@ accordionAbout.open(0);
 
 // Danyil Shevchenko
 import Swiper from 'swiper';
-import { Navigation, Keyboard, Mousewheel } from 'swiper/modules';
+import { Keyboard, Mousewheel, Navigation } from 'swiper/modules';
 
-const swiper = new Swiper('.swiper', {
+const swiper = new Swiper('.about-me-slider', {
   modules: [Navigation, Keyboard, Mousewheel],
+  containerModifierClass: 'about-me-slider-',
+  wrapperClass: 'about-me-slider-wrapper',
+  slideClass: 'about-me-slider-slide',
+  slideActiveClass: 'about-me-slider-slide-active',
   slidesPerView: 2,
-  slidesOffsetAfter: 83,
   grabCursor: true,
-  rewind: true,
+  loop: true,
   navigation: {
     enabled: true,
-    prevEl: '.swiper-button-prev',
-    nextEl: '.swiper-button-next',
+    nextEl: '.about-me-slider-button-next',
   },
   keyboard: {
     enabled: true,
   },
   mousewheel: {
     enabled: true,
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: 3,
+    },
+    1440: {
+      slidesPerView: 6,
+    },
   },
 });
 // Danyil Shevchenko
