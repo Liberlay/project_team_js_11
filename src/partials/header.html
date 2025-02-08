@@ -8,34 +8,80 @@
   </head>
   <body>
     <header class="header">
-      <div class="profile">
-        <a href="../index.html">
-          <img class="headerLogo" src="../images/logo.webp" alt="My photo" />
-        </a>
-        <svg width="84" height="19">
-          <use href="../images/icons.svg#icon-logo-title"></use>
-        </svg>
-      </div>
-      <nav class="headerMenu">
-        <div class="headerBurger">
-          <svg width="28" height="28">
-            <use href="../images/icons.svg#icon-burger"></use>
-          </svg>
-        </div>
-        <!-- 
-        <p>Menu</p>
-        <ul class="headerNavigation">
-          <li class="headerNavItem"><a class="headerNavLink">About me</a></li>
-          <li class="headerNavItem"><a class="headerNavLink">Benefits</a></li>
-          <li class="headerNavItem"><a class="headerNavLink">Projects</a></li>
-          <li class="headerNavItem"><a class="headerNavLink">FAQ</a></li>
+      <div class="headerMarkup">
+        <ul class="headerItems">
+          <li class="headerProfileItem">
+            <div class="headerProfile">
+              <a href="../index.html">
+                <img
+                  class="headerLogo"
+                  src="../images/logo.webp"
+                  alt="My photo"
+                />
+              </a>
+              <div class="icon-logo-title">
+                <svg width="84" height="19" fill="#fafafa">
+                  <use href="../images/icons.svg#icon-logo-title"></use>
+                </svg>
+              </div>
+            </div>
+          </li>
+          <li class="headerItemMenu">
+            <div class="headerBurger">
+              <svg width="28" height="28" fill="#fafafa">
+                <use href="../images/icons.svg#icon-burger"></use>
+              </svg>
+            </div>
+          </li>
+          <li class="headerMenu">
+            <div class="headerMenuStyles">
+              <p class="headerMenuTitle">Menu</p>
+              <nav class="headerMenuNav">
+                <ul class="headerNavigation">
+                  <li class="headerNavItem">
+                    <a class="headerNavLink">About me</a>
+                  </li>
+                  <li class="headerNavItem">
+                    <a class="headerNavLink">Benefits</a>
+                  </li>
+                  <li class="headerNavItem">
+                    <a class="headerNavLink">Projects</a>
+                  </li>
+                  <li class="headerNavItem">
+                    <a class="headerNavLink">FAQ</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </li>
+          <li class="headerOrderItem">
+            <a href="#work-together" class="headerOrderBtn"
+              >Order the project</a
+            >
+          </li>
         </ul>
-        <button class="headerOrder">Order the project</button>
-        <button>
-            <svg width="28" height="28">
-            <use href="../images/icons.svg#icon-close"></use>
-          </svg></button>-->
-      </nav>
+      </div>
+      <div class="headerMobMenu">
+        <svg width="28" height="28" fill="#fafafa">
+          <use href="../images/icons.svg#icon-close"></use>
+        </svg>
+        <nav class="headerMenuNav">
+          <ul class="headerNavigation">
+            <li class="headerNavItem">
+              <a class="headerNavLink">About me</a>
+            </li>
+            <li class="headerNavItem">
+              <a class="headerNavLink">Benefits</a>
+            </li>
+            <li class="headerNavItem">
+              <a class="headerNavLink">Projects</a>
+            </li>
+            <li class="headerNavItem">
+              <a class="headerNavLink">FAQ</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
   </body>
 </html>

@@ -21,10 +21,120 @@ a {
 .header {
   position: absolute;
   padding: 31px 16px;
+  z-index: 999;
+  height: 80px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.headerItems {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+}
+
+.headerProfile {
+  display: flex;
+  flex-direction: row;
+  gap: 7px;
+  cursor: pointer;
 }
 
 .headerLogo {
   height: 80px;
   width: 80px;
   border-radius: 18px;
+}
+
+.headerItemMenu {
+  cursor: pointer;
+}
+
+.headerMenu {
+  display: none;
+}
+
+.headerOrderItem {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .headerBurger {
+    display: none;
+  }
+
+  .headerMenu {
+    display: block;
+  }
+
+  .headerItemMenu {
+    display: none;
+  }
+
+  .headerOrderItem {
+    display: block;
+  }
+
+  .headerMenuTitle {
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: -0.02em;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    color: #fafafa;
+    cursor: pointer;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .headerMenuTitle:hover,
+  .headerMenuTitle:focus {
+    color: #ed3b44;
+  }
+
+  .headerMenuNav {
+    display: none;
+  }
+
+  .headerNavItem {
+    text-align: center;
+    padding: 5px;
+  }
+
+  .headerNavLink {
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: -0.02em;
+    text-decoration-skip-ink: none;
+    color: #fafafa;
+    cursor: pointer;
+  }
+
+  .headerNavLink:hover,
+  .headerNavLink:focus {
+    color: #ed3b44;
+  }
+
+  .headerOrderBtn {
+    border-radius: 60px;
+    width: 163px;
+    height: 55px;
+    background: #ed3b44;
+    color: #fafafa;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: -0.02em;
+    cursor: pointer;
+    padding: 18px 23px;
+  }
+
+  .headerOrderBtn:hover {
+    background: #e0373f;
+  }
+
+  .headerMobMenu {
+    display: none;
+  }
 }
