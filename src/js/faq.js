@@ -19,17 +19,3 @@ faqButtons.forEach(button => {
       arrowIcon.classList.toggle('arrow-up');
   })
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
