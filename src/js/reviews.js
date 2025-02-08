@@ -1,14 +1,16 @@
 import Swiper from 'swiper';
 import { Navigation, Keyboard } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/navigation';
+// import 'swiper/css';
+// import 'swiper/css/navigation';
 import axios from 'axios';
 
 const listEl = document.querySelector('.reviews-swiper-wrapper');
 
 async function getReviewsData() {
   try {
-    const response = await axios.get('https://portfolio-js.b.goit.study/api/reviews');
+    const response = await axios.get(
+      'https://portfolio-js.b.goit.study/api/reviews'
+    );
     return response.data;
   } catch (error) {
     console.error('Error fetching reviews:', error);
@@ -77,7 +79,10 @@ async function initSwiper() {
 
   function checkNavigationButtons(swiper) {
     if (revBtnPrevEl && revBtnNextEl) {
-      revBtnPrevEl.classList.toggle('swiper-button-disabled', swiper.isBeginning);
+      revBtnPrevEl.classList.toggle(
+        'swiper-button-disabled',
+        swiper.isBeginning
+      );
       revBtnNextEl.classList.toggle('swiper-button-disabled', swiper.isEnd);
     }
   }
