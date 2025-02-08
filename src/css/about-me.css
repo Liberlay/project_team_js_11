@@ -130,6 +130,7 @@
 @media screen and (min-width: 1440px) {
   .flex-container {
     display: flex;
+    margin-bottom: 32px;
   }
 
   .about-me-bg-text {
@@ -175,6 +176,12 @@
 
 /* Accordion menu */
 
+.accordion-container-about {
+  display: flex;
+  flex-direction: column;
+
+}
+
 .accordion-container-about .underline {
   position: relative;
   padding-bottom: 20px;
@@ -214,7 +221,6 @@
 .accordion-container-about .ac .ac-trigger {
   padding: 0;
 }
-
 
 .is-active .about-me-svg {
   transform: rotate(180deg);
