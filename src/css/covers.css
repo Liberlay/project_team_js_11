@@ -1,4 +1,8 @@
 .covers {
+  padding-bottom: 64px;
+}
+
+.covers-container {
   position: relative;
   display: flex;
   flex-wrap: wrap;
@@ -6,12 +10,11 @@
   max-width: 375px;
   height: 508px;
   margin: 0 auto;
-  margin-bottom: 64px;
   overflow: hidden;
   background-color: rgba(217, 217, 217, 4%);
 }
 
-.covers::after {
+.covers-container::after {
   content: '';
   position: absolute;
   width: 100%;
@@ -75,10 +78,14 @@
 
 @media screen and (min-width: 768px) {
   .covers {
+    padding-bottom: 96px;
+  }
+
+  .covers-container {
     max-width: 768px;
     height: 960px;
     gap: 30px;
-    margin-bottom: 96px;
+    padding-bottom: 96px;
   }
   .covers-wrapper {
     gap: 30px;
@@ -91,10 +98,14 @@
 
 @media screen and (min-width: 1440px) {
   .covers {
+    padding-bottom: 164px;
+  }
+
+  .covers-container {
     max-width: 1440px;
     height: 960px;
     gap: 40px;
-    margin-bottom: 164px;
+    padding-bottom: 164px;
   }
   .covers-wrapper {
     gap: 40px;
@@ -106,19 +117,19 @@
 }
 
 @media (min-resolution: 192dpi) {
-  .covers::after {
+  .covers-container::after {
     background-image: url(/images/covers/bg_2x.png);
   }
 }
 
 @media (min-resolution: 192dpi) and (min-width: 768px) {
-  .covers::after {
+  .covers-container::after {
     background-image: url(/images/covers/bg_2x.png);
   }
 }
 
 @media (min-resolution: 192dpi) and (min-width: 1440px) {
-  .covers::after {
+  .covers-container::after {
     background-image: url(/images/covers/bg_2x.png);
   }
 }
