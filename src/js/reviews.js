@@ -1,7 +1,5 @@
 import Swiper from 'swiper';
 import { Navigation, Keyboard } from 'swiper/modules';
-// import 'swiper/css';
-// import 'swiper/css/navigation';
 import axios from 'axios';
 
 const listEl = document.querySelector('.reviews-swiper-wrapper');
@@ -49,7 +47,7 @@ async function initSwiper() {
   const revBtnPrevEl = document.querySelector('.reviews-prev-btn');
   const revBtnNextEl = document.querySelector('.reviews-next-btn');
 
-  const swiper = new Swiper('.reviews-section .swiper-reviews', {
+  const swiper = new Swiper('.reviews .swiper-reviews', {
     modules: [Navigation, Keyboard],
     direction: 'horizontal',
     spaceBetween: 16,

@@ -1,24 +1,23 @@
 @import 'swiper/css/bundle';
 
 .projects-section {
-  padding-bottom: 64px;
+  margin: 0 auto;
+  margin-bottom: 64px;
+  max-width: 375px;
 }
 
 .projects-container {
-  padding: 0 16px;
-  min-width: 320px;
-  max-width: 375px;
-  margin: 0 auto;
+  margin: 0 16px;
 }
 
 .projects-title {
-  font-weight: 600;
+  margin-bottom: 32px;
   font-size: 16px;
+  font-weight: 600;
   line-height: 1.5;
   letter-spacing: -0.02em;
   text-transform: uppercase;
   color: #fafafa66;
-  margin-bottom: 32px;
 }
 
 .projects-swiper {
@@ -93,8 +92,6 @@
 }
 
 .projects-img-wrp {
-  min-width: 256px;
-  max-width: 311px;
   margin: 100px 16px;
 }
 
@@ -127,12 +124,12 @@
 
 @media screen and (min-width: 768px) {
   .projects-section {
-    padding-bottom: 96px;
+    margin-bottom: 96px;
+    max-width: 768px;
   }
 
   .projects-container {
-    padding: 0 32px;
-    max-width: 768px;
+    margin: 0 32px;
   }
 
   .projects-cards-gallery {
@@ -204,7 +201,8 @@
 
 @media screen and (min-width: 1440px) {
   .projects-section {
-    padding-bottom: 164px;
+    margin-bottom: 164px;
+    max-width: 1440px;
   }
 
   .projects-container {

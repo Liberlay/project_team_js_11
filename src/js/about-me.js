@@ -6,20 +6,17 @@ import Accordion from 'accordion-js';
 import 'accordion-js/dist/accordion.min.css';
 
 // Css svg rotator
+const faqButtons = document.querySelectorAll('.about-me .ac-trigger');
 
-document.addEventListener('DOMContentLoaded', function () {
-  const button = document.querySelector(
-    '.accordion-container-about .ac-trigger'
-  );
-  const parent = button.closest('.ac'); // Родительский элемент с классом "ac"
-
-  button.addEventListener('click', function () {
-    parent.classList.toggle('is-rotated'); // Добавляет/убирает класс "is-active"
+faqButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const arrowIcon = button.querySelector('.about-me .ac-svg');
+    arrowIcon.classList.toggle('active');
   });
 });
 // Css svg rotator
 
-const accordionAbout = new Accordion('.accordion-container-about', {
+const accordionAbout = new Accordion('.about-me .accordion-container', {
   duration: 700,
 });
 accordionAbout.open(0);
@@ -46,16 +43,10 @@ const swiper = new Swiper('.about-me-slider', {
   keyboard: {
     enabled: true,
   },
-  mousewheel: {
-    enabled: true,
-  },
+  mousewheel: { enabled: true },
   breakpoints: {
-    768: {
-      slidesPerView: 3,
-    },
-    1440: {
-      slidesPerView: 6,
-    },
+    768: { slidesPerView: 3 },
+    1440: { slidesPerView: 6 },
   },
 });
 // Danyil Shevchenko

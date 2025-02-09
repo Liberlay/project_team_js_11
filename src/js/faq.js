@@ -1,21 +1,16 @@
-import Accordion from "accordion-js";
-import "accordion-js/dist/accordion.min.css";
+import Accordion from 'accordion-js';
+import 'accordion-js/dist/accordion.min.css';
 
-
-
-
-const accordionfaq = new Accordion('.accordion-container-faq', {
-  duration: 400,
+const accordionfaq = new Accordion('.faq .accordion-container', {
+  duration: 700,
   showMultiple: true,
 });
 
-accordionfaq.open(0);
-
-const faqButtons = document.querySelectorAll('.faq-show-text-button');
+const faqButtons = document.querySelectorAll('.faq .ac-trigger');
 
 faqButtons.forEach(button => {
   button.addEventListener('click', () => {
-      const arrowIcon = button.querySelector('.icon-faq');
-      arrowIcon.classList.toggle('arrow-up');
-  })
+    const arrowIcon = button.querySelector('.faq .ac-svg');
+    arrowIcon.classList.toggle('active');
+  });
 });
