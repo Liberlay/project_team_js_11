@@ -142,6 +142,13 @@
 
   .projects-item {
     padding: 18px;
+    transition: border 300ms ease-in-out;
+  }
+
+  .projects-item:hover,
+  .projects-item:focus {
+    border: 1px solid var(--accent);
+    box-shadow: inset 0px 0px 8px #e0373f66;
   }
 
   .projects-text {
