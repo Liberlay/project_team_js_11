@@ -11,7 +11,7 @@ const faqButtons = document.querySelectorAll('.about-me .ac-trigger');
 faqButtons.forEach(button => {
   button.addEventListener('click', () => {
     const arrowIcon = button.querySelector('.about-me .ac-svg');
-    arrowIcon.classList.toggle('active');
+    arrowIcon.classList.toggle('rotated');
   });
 });
 // Css svg rotator
