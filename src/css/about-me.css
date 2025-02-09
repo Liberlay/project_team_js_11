@@ -39,7 +39,7 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
-  margin-bottom: 64px;
+  margin-bottom: 32px;
 }
 
 .about-me-bg-text {
@@ -58,7 +58,6 @@
   letter-spacing: -0.03em;
   text-align: left;
   text-transform: uppercase;
-
   color: var(--primary);
 }
 
@@ -80,6 +79,10 @@
 @media screen and (min-width: 768px) {
   .about-me {
     max-width: 768px;
+  }
+
+  .flex-container {
+    margin-bottom: 64px;
   }
 
   .about-me .container {
@@ -116,7 +119,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin-bottom: 32px;
+    margin-bottom: 96px;
   }
 
   .about-me-bg-text {
