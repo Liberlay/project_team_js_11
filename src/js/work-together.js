@@ -59,6 +59,7 @@ function getContactInfo(event) {
     .then(data => {
       modalBackdrop.classList.add('is-open');
       modalForm.classList.add('is-open');
+      document.body.style.overflow = 'hidden';
       form.reset();
     })
     .catch(error => {
@@ -86,6 +87,7 @@ document.addEventListener('keydown', event => {
 function closeModal() {
   modalBackdrop.classList.remove('is-open');
   modalBackdrop.classList.remove('is-open');
+  document.body.style.overflow = '';
 }
 
 const inputs = document.querySelectorAll('.work-together-form-input');
