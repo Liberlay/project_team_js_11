@@ -97,11 +97,13 @@
   }
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1440px) {
   .faq {
     max-width: 1440px;
+    margin: 0 auto;
   }
   .faq-container {
+    max-width: 1440px;
     padding-bottom: 164px;
   }
 
