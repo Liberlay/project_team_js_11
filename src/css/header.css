@@ -1,51 +1,31 @@
-/*General*/
-/** {
-  box-sizing: content-box;
-}
-
-p,
-h1 {
-  margin: 0;
-}
-
-a {
-  text-decoration: none;
-}
-*/
-
-/*Header*/
 .hidden {
-  opacity: 0;
-  visibility: hidden;
   display: none;
+  visibility: hidden;
+  opacity: 0;
 }
 
 .header {
   position: absolute;
-  padding: 31px 16px;
-  z-index: 999;
-  height: 80px;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  top: 32px;
+  margin: 0 16px;
+  width: calc(100% - 32px);
+  max-width: 375px;
+  z-index: 5;
 }
 
 .headerItems {
   display: flex;
-  align-items: start;
   justify-content: space-between;
+  width: 100%;
 }
 
 .headerProfile {
   display: flex;
-  flex-direction: row;
   gap: 7px;
   cursor: pointer;
 }
 
 .headerLogo {
-  height: 80px;
   width: 80px;
   border-radius: 18px;
 }
@@ -68,21 +48,24 @@ a {
 
 .headerMobMenu {
   background-image: url('../images/bg.webp');
-  background-position: top left;
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-size: contain;
   position: fixed;
   top: 0;
   left: 0;
-  right: 0;
-  align-items: center;
   display: flex;
+  align-items: center;
   justify-content: center;
-  z-index: 9999;
+  z-index: 10;
   width: 100%;
   height: 100vh;
-  transition: opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1),
-    visibility 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateX(0);
+  opacity: 1;
+  transition: 0.35s;
+}
+
+.headerMobMenu.hidden {
+  transform: translateX(25%);
+  opacity: 0;
 }
 
 .mobMenuCloseBttn {
@@ -101,31 +84,32 @@ a {
 }
 
 .headerMobNavLink {
-  color: #fafafa;
+  color: var(--primary);
   text-decoration-line: underline;
+  transition: 0.3s;
 }
 
 .headerMobNavLink:hover,
 .headerMobNavLink:focus {
-  color: #ed3b44;
+  color: #e0373f;
 }
 
 .headerMobOrderBtn {
   position: absolute;
   bottom: 64px;
-  width: 164px;
-  height: 45px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 60px;
-  background: #ed3b44;
-  color: #fafafa;
+  width: 164px;
+  height: 45px;
   font-size: 14px;
-  font-style: normal;
   font-weight: 500;
   line-height: normal;
   letter-spacing: -0.02em;
+  color: var(--primary);
+  background: var(--accent);
+  transition: 0.3s;
 }
 
 .headerMobOrderBtn:hover,
@@ -134,12 +118,24 @@ a {
 }
 
 @media (min-width: 768px) {
-  .headerBurger {
+  .header {
+    margin: 0 32px;
+    width: calc(100% - 64px);
+    max-width: 768px;
+  }
+
+  .headerItemMenu {
     display: none;
   }
 
   .headerMenu {
     display: block;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: -0.02em;
+    text-decoration: underline;
+    color: var(--primary);
   }
 
   .headerItemMenu {
@@ -147,24 +143,18 @@ a {
   }
 
   .headerOrderItem {
-    display: inline-flex;
+    display: flex;
+    align-items: flex-start;
   }
 
   .headerMenuTitle {
-    font-weight: 500;
-    font-size: 16px;
-    letter-spacing: -0.02em;
-    text-decoration: underline;
-    text-decoration-skip-ink: none;
-    color: #fafafa;
+    padding: 10px 0;
     cursor: pointer;
-    padding: 10px;
-    text-align: center;
   }
 
   .headerMenuTitle:hover,
   .headerMenuTitle:focus {
-    color: #ed3b44;
+    color: #e0373f;
   }
 
   .headerNavItem {
@@ -173,28 +163,25 @@ a {
   }
 
   .headerNavLink {
-    font-weight: 500;
-    font-size: 16px;
-    letter-spacing: -0.02em;
-    text-decoration-skip-ink: none;
-    color: #fafafa;
+    color: var(--primary);
     cursor: pointer;
   }
 
   .headerNavLink:hover,
   .headerNavLink:focus {
-    color: #ed3b44;
+    color: #e0373f;
   }
 
   .headerOrderBtn {
-    border-radius: 60px;
-    background: #ed3b44;
-    color: #fafafa;
-    font-weight: 500;
-    font-size: 16px;
-    letter-spacing: -0.02em;
-    cursor: pointer;
     padding: 18px 23px;
+    border-radius: 60px;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    color: var(--primary);
+    background: var(--accent);
+    cursor: pointer;
+    transition: 0.3s;
   }
 
   .headerOrderBtn:hover {
@@ -203,5 +190,15 @@ a {
 
   .headerMobMenu {
     display: none;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .header {
+    max-width: 1440px;
+  }
+
+  .headerMenu {
+    font-size: 18px;
   }
 }

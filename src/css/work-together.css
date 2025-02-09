@@ -1,19 +1,30 @@
 @import 'izitoast/dist/css/iziToast.min.css';
 /* ====Mobile styles====*/
-
-.work-together-section {
-  background-color: var(--background);
-  background-image: url(/images/work-together-bg.webp);
-  background-repeat: no-repeat;
-  background-position: top right;
-  background-size: 85px 100%;
-  z-index: 10;
-  min-width: 320px;
-  max-width: 375px;
-  padding: 32px 16px;
+.work-together {
+  position: relative;
   margin: 0 auto;
+  max-width: 320px;
 }
 
+.work-together .bg::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+  background-image: url(./images/work-together-bg_2x.webp);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 100%;
+  z-index: -1;
+}
+
+.work-together .container {
+  margin: 0 auto;
+  padding: 0 16px 32px 16px;
+}
 .work-together-title-wrapper {
   display: inline;
   margin-bottom: 64px;
@@ -94,7 +105,7 @@
 }
 .work-together-form-btn:hover,
 .work-together-form-btn:focus {
-  background-color: #6c070c;
+  background-color: #e0373f;
 }
 .contacts {
   font-style: normal;
@@ -141,10 +152,10 @@
   width: 100%;
   height: 100%;
   background-color: rgba(15, 15, 16, 0.6);
-  padding: 138px 16px;
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+  z-index: 999;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -158,18 +169,17 @@
 }
 .work-together-modal {
   position: absolute;
-  border-radius: 20px;
-  padding: 64px 32px;
   text-align: center;
-  width: 343px;
+  padding: 64px 32px;
+  border-radius: 20px;
+  width: calc(100% - 32px);
   height: 276px;
   display: none;
   overflow: auto;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 999999999;
-  background-color: rgba(6, 1, 1, 0.475);
+  background-color: var(--background);
   border: 1px solid rgba(250, 250, 250, 0.1);
 }
 .work-together-modal-head-text {
@@ -188,21 +198,25 @@
   letter-spacing: -0.32px;
 }
 .work-together-modal-close-svg {
-  fill: var(--primary);
-  border: none;
-  background-color: rgba(255, 255, 255, 0.2);
+  stroke: var(--primary);
+  transition: 0.3s;
 }
 .work-together-modal-close-btn {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(255, 255, 255, 0.2);
   border: none;
   border-radius: 50%;
   position: absolute;
   top: 20px;
   right: 20px;
   padding: 3px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.work-together-modal-close-btn:hover .work-together-modal-close-svg {
+  stroke: var(--accent);
 }
 /* ====/Modal==== */
 
@@ -210,10 +224,12 @@
 
 /* ====Tablet styles==== */
 @media screen and (min-width: 768px) {
-  .work-together-section {
-    min-width: 768px;
-    background-size: 180px 100%;
-    padding: 80px 32px;
+  .work-together {
+    max-width: 768px;
+  }
+  .work-together .container {
+    max-width: 768px;
+    padding: 0 32px 169px 32px;
   }
   .work-together-title-wrapper {
     width: 542px;
@@ -266,11 +282,13 @@
 
 /* ====Desktop styles==== */
 @media screen and (min-width: 1440px) {
-  .work-together-section {
-    background-image: url(/images/work-together-bg_2x.webp);
-    min-width: 1440px;
-    background-size: 400px 100%;
-    padding: 80px 180px;
+  .work-together {
+    max-width: 1440px;
+  }
+  .work-together .container {
+    position: relative;
+    padding: 0 0 169px 0;
+    max-width: 1048px;
   }
   .work-together-title-wrapper {
     width: 542px;

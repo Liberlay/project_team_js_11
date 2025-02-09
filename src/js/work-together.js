@@ -87,3 +87,14 @@ function closeModal() {
   modalBackdrop.classList.remove('is-open');
   modalBackdrop.classList.remove('is-open');
 }
+
+const inputs = document.querySelectorAll('.work-together-form-input');
+
+inputs.forEach(input => {
+  input.addEventListener('input', () => {
+    let maxLength = 30;
+    if (input.value.length > maxLength) {
+      input.value = input.value.substring(0, maxLength) + '...';
+    }
+  });
+});

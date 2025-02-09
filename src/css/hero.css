@@ -1,31 +1,13 @@
-/*General*/
-/*
-p,
-h1 {
-  margin: 0;
-}
-
-a {
-  text-decoration: none;
-}
-
-a {
-  text-decoration: none;
-}
-
-ul {
-  list-style: none;
-}
-*/
-
-/*Hero*/
-
 .hero {
+  display: flex;
+  flex-direction: column;
   background: url('../images/bg.webp') no-repeat;
   background-size: 100% 100%;
+  margin: 0 auto;
+  margin-bottom: 64px;
+  max-width: 375px;
   max-height: 812px;
-  padding: 31px 16px;
-  margin-bottom: 60px;
+  padding: 32px 16px;
 }
 
 .heroContainer {
@@ -52,36 +34,67 @@ ul {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+  flex-wrap: wrap;
   gap: 4px;
 }
 
-.heroSocialLink {
+.heroSocialItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 60px;
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  width: 37px;
+  height: 37px;
   font-weight: 500;
   font-size: 14px;
   letter-spacing: -0.02em;
-  color: #fafafa;
-  border: 1px solid rgba(250, 250, 250, 0.2);
-  border-radius: 60px;
-  padding: 10px 12px;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-.heroSocialLink:hover,
-.heroSocialLink:focus {
-  border-color: #fafafa;
+.heroSocialItem:last-child {
+  width: 178px;
+  height: 37px;
+}
+
+.heroSocialItem:hover,
+.heroSocialItem:focus {
+  background-color: var(--primary);
+}
+
+.heroSocialLink {
+  color: var(--primary);
+  transition: 0.3s;
+}
+
+.heroSocialItem:hover .heroSocialLink,
+.heroSocialLink:focus .heroSocialLink {
+  color: #000;
 }
 
 @media (min-width: 768px) {
   .hero {
+    max-width: 768px;
     max-height: 1024px;
-    margin-bottom: 90px;
   }
 
-  h1 {
+  .heroTitle {
     font-size: 90px;
   }
 
   .heroSocial {
     justify-content: flex-end;
+  }
+
+  .heroSocialItem {
+    width: 55px;
+    height: 55px;
+  }
+
+  .heroSocialItem:last-child {
+    width: 223px;
+    height: 55px;
   }
 
   .heroSocialLink {
@@ -90,10 +103,18 @@ ul {
 }
 
 @media (min-width: 1440px) {
+  .hero {
+    max-width: 1440px;
+    margin-bottom: 96px;
+  }
+
+  .heroContainer {
+    max-width: 1440px;
+  }
+
   .heroTitle {
     font-size: 90px;
-    max-width: 1084px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
+    max-width: 1175px;
   }
 }

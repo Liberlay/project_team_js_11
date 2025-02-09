@@ -1,5 +1,5 @@
 //Menu dropdown
-const menu = document.querySelector('.headerMenu');
+const menu = document.querySelector('.headerMenuTitle');
 const menuNav = document.querySelector('.headerMenuNav');
 const menuItems = document.querySelectorAll('.headerNavLink');
 
