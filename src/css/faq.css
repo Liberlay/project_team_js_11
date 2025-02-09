@@ -4,8 +4,8 @@
 }
 
 .faq-container {
-  margin: 0 16px;
-  margin-bottom: 64px;
+  padding: 0 16px;
+  padding-bottom: 64px;
 }
 
 .faq-title {
@@ -84,8 +84,8 @@
   }
 
   .faq-container {
-    margin: 0 32px;
-    margin-bottom: 96px;
+    padding: 0 32px;
+    padding-bottom: 96px;
   }
 
   .faq .accordion-container .ac-header {
@@ -102,7 +102,7 @@
     max-width: 1440px;
   }
   .faq-container {
-    margin-bottom: 164px;
+    padding-bottom: 164px;
   }
 
   .faq .accordion-container {
