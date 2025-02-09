@@ -3,14 +3,14 @@
 .benefits-section {
   max-width: 375px;
   margin: 0 auto;
-  margin-bottom: 64px;
+  padding-bottom: 64px;
 }
 
-.benefits {
+.benefits-container {
   display: flex;
   flex-direction: column;
   gap: 32px;
-  margin: 0 16px;
+  padding: 0 16px;
 }
 
 .benefits-main-title {
@@ -101,11 +101,11 @@
 @media screen and (min-width: 768px) {
   .benefits-section {
     max-width: 768px;
-    margin-bottom: 96px;
+    padding-bottom: 96px;
   }
 
-  .benefits {
-    margin: 0 32px;
+  .benefits-container {
+    padding: 0 32px;
   }
 
   .benefits-list-container {
@@ -127,18 +127,24 @@
 @media screen and (min-width: 1440px) {
   .benefits-section {
     max-width: 1440px;
-    margin-bottom: 164px;
+    padding-bottom: 164px;
   }
 
-  .benefits {
+  .benefits-container {
     flex-direction: row;
     justify-content: space-between;
+    padding: 0;
   }
 
   .benefits-list-container {
     flex-direction: row;
     flex-wrap: wrap;
     width: 50%;
+    width: 680px;
+  }
+
+  .benefits-list {
+    width: 680px;
   }
 
   .benefits-item {
