@@ -39,7 +39,7 @@
   border-radius: 20px;
   max-width: 344px;
   background-color: #242527;
-  transition: 500ms ease-in-out;
+  transition: 400ms ease-in-out;
 }
 
 .benefits-item:hover {
@@ -87,7 +87,7 @@
   font-weight: 500;
   color: var(--primary);
   background-color: transparent;
-  transition: 500ms ease-in-out;
+  transition: 400ms ease-in-out;
   cursor: pointer;
 }
 

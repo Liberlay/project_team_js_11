@@ -21,7 +21,7 @@
   border: 1px solid rgba(250, 250, 250, 0.2);
   border-radius: 20px;
   min-height: 302px;
-  transition: transform 300ms ease-in-out, opacity 300ms ease-in-out,
+  transition: transform 400ms ease-in-out, opacity 300ms ease-in-out,
     border 300ms ease-in-out;
 }
 
@@ -33,10 +33,10 @@
 
 .reviews-swiper-wrapper {
   margin-bottom: 32px;
-  transition: transform 300ms ease-in-out, opacity 300ms ease-in-out;
+  transition: transform 400ms ease-in-out, opacity 300ms ease-in-out;
 }
 
-.reviews-swiper-wrapper:hover> :not(:hover) {
+.reviews-swiper-wrapper:hover > :not(:hover) {
   transform: scale(0.7);
   opacity: 0.5;
 }
@@ -71,7 +71,6 @@
   overflow-y: auto;
   scrollbar-width: thin;
   scrollbar-color: var(--background-hero) var(--background);
-
 }
 
 .reviews-swiper-btn-container {
@@ -92,7 +91,7 @@
   fill: transparent;
   stroke: var(--primary);
   padding: 14px;
-  transition: border 300ms ease-in-out;
+  transition: border 400ms ease-in-out;
   cursor: pointer;
 }
 
@@ -102,7 +101,7 @@
   stroke: var(--background-hero);
   opacity: 0.5;
   cursor: not-allowed;
-  transition: opacity 300ms ease-in-out;
+  transition: opacity 400ms ease-in-out;
 }
 
 /* hover/active */

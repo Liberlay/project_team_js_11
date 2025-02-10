@@ -3,11 +3,10 @@
   flex-direction: column;
   background: url('../images/bg.webp') no-repeat;
   background-size: cover;
-  background-position: 15%;
+  background-position: 30%;
   margin-bottom: 64px;
   max-height: 812px;
   padding: 32px 16px;
-  width: 100vw;
 }
 
 .heroContainer {
@@ -51,7 +50,7 @@
   font-size: 14px;
   letter-spacing: -0.02em;
   cursor: pointer;
-  transition: 0.3s;
+  transition: 400ms ease-in-out;
 }
 
 .heroSocialItem:last-child {
@@ -66,7 +65,7 @@
 
 .heroSocialLink {
   color: var(--primary);
-  transition: 0.3s;
+  transition: 400ms ease-in-out;
 }
 
 .heroSocialItem:hover .heroSocialLink,
@@ -76,7 +75,7 @@
 
 @media (min-width: 768px) {
   .hero {
-    background-position: 25%;
+    background-position: 35%;
     padding: 32px;
     max-height: 1024px;
   }
@@ -128,5 +127,7 @@
 @media (min-resolution: 192dpi) {
   .hero {
     background: url('../images/bg_2x.webp') no-repeat;
+    background-size: cover;
+    background-position: 30%;
   }
 }

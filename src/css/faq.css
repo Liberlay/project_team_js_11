@@ -42,7 +42,12 @@
   color: var(--primary);
 }
 
+.faq .accordion-container > .ac .ac-panel {
+  margin: 0;
+}
+
 .faq .accordion-container > .ac .ac-text {
+  margin: 0;
   padding: 0;
   font-weight: 500;
   font-size: 16px;
@@ -70,7 +75,7 @@
 .ac-svg {
   width: 20px;
   height: 20px;
-  transition: 0.3s;
+  transition: 400ms ease-in-out;
 }
 
 .faq .active {
@@ -86,6 +91,11 @@
 
   .faq-container {
     padding: 0 32px;
+  }
+
+  .faq .accordion-container .ac {
+    padding-top: 32px;
+    padding-bottom: 24px;
   }
 
   .faq .accordion-container .ac-header {
@@ -113,6 +123,7 @@
   }
 
   .faq .accordion-container .ac {
+    padding-bottom: 26px;
     width: 50%;
   }
 

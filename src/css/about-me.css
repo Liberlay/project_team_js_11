@@ -2,10 +2,11 @@
 
 /* Svg Rotation */
 .about-me-svg {
-  transition: transform 0.3s ease; /* Плавный переход */
+  transition: 400ms ease-in-out; /* Плавный переход */
 }
 
 .rotated {
+  stroke: var(--accent);
   transform: rotate(180deg); /* Поворот на 180 градусов */
 }
 /* Svg Rotation */
@@ -191,7 +192,7 @@
 .about-me .ac-svg {
   width: 18px;
   height: 18px;
-  transition: 0.3s;
+  transition: 400ms ease-in-out;
 }
 
 .about-me .active {
@@ -307,7 +308,7 @@
   width: 130px;
   height: 130px;
   color: var(--primary);
-  transition: 0.5s;
+  transition: 400ms ease-in-out;
 }
 
 .about-me-slider-slide-active {
@@ -320,7 +321,7 @@
   fill: transparent;
   stroke: var(--background-hero);
   cursor: pointer;
-  transition: 0.5s;
+  transition: 400ms ease-in-out;
 }
 
 .about-me-slider svg:hover {
