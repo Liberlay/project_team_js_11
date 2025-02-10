@@ -192,10 +192,6 @@
   .headerOrderBtn:hover {
     background: var(--accent-hover);
   }
-
-  .headerMobMenu {
-    display: none;
-  }
 }
 
 @media screen and (min-width: 1440px) {
