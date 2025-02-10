@@ -7,10 +7,14 @@
 .header {
   position: absolute;
   top: 32px;
-  margin: 0 16px;
-  width: calc(100% - 32px);
-  max-width: 375px;
+  width: 100%;
   z-index: 5;
+}
+
+.headerMarkup {
+  margin: 0 auto;
+  padding: 0 16px;
+  max-width: 375px;
 }
 
 .headerItems {
@@ -47,8 +51,10 @@
 }
 
 .headerMobMenu {
-  background-image: url('../images/bg.webp');
-  background-size: contain;
+  background-image: url('/images/bg.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: 50vh 100%;
   position: fixed;
   top: 0;
   left: 0;
@@ -91,7 +97,7 @@
 
 .headerMobNavLink:hover,
 .headerMobNavLink:focus {
-  color: #e0373f;
+  color: var(--accent-hover);
 }
 
 .headerMobOrderBtn {
@@ -114,13 +120,12 @@
 
 .headerMobOrderBtn:hover,
 .headerMobOrderBtn:focus {
-  background: #e0373f;
+  background: var(--accent-hover);
 }
 
 @media (min-width: 768px) {
-  .header {
-    margin: 0 32px;
-    width: calc(100% - 64px);
+  .headerMarkup {
+    padding: 0 32px;
     max-width: 768px;
   }
 
@@ -154,7 +159,7 @@
 
   .headerMenuTitle:hover,
   .headerMenuTitle:focus {
-    color: #e0373f;
+    color: var(--accent-hover);
   }
 
   .headerNavItem {
@@ -169,7 +174,7 @@
 
   .headerNavLink:hover,
   .headerNavLink:focus {
-    color: #e0373f;
+    color: var(--accent-hover);
   }
 
   .headerOrderBtn {
@@ -185,7 +190,7 @@
   }
 
   .headerOrderBtn:hover {
-    background: #e0373f;
+    background: var(--accent-hover);
   }
 
   .headerMobMenu {
@@ -194,7 +199,7 @@
 }
 
 @media screen and (min-width: 1440px) {
-  .header {
+  .headerMarkup {
     max-width: 1440px;
   }
 

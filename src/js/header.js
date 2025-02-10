@@ -26,7 +26,7 @@ menuItems.forEach(item => {
 //Order the project button
 const orderBttn = document.querySelector('.headerOrderBtn');
 
-orderBttn.addEventListener('click', () => {
+orderBttn.addEventListener('click', event => {
   event.preventDefault();
   const targetId = orderBttn.getAttribute('href');
   const targetElement = document.querySelector(targetId);
@@ -71,7 +71,7 @@ mobMenuItems.forEach(item => {
   });
 });
 
-mobMenuOrderBttn.addEventListener('click', () => {
+mobMenuOrderBttn.addEventListener('click', event => {
   mobMenu.classList.add('hidden');
   document.body.classList.remove('active');
   event.preventDefault();

@@ -43,7 +43,7 @@
 }
 
 .benefits-item:hover {
-  box-shadow: 0 0 5px #e0373f, 0 0 10px #e0373f;
+  box-shadow: 0 0 5px var(--accent-hover), 0 0 10px var(--accent-hover);
 }
 
 .benefits-img {
@@ -64,7 +64,7 @@
   font-weight: 600;
   line-height: 1.5;
   letter-spacing: -0.02em;
-  color: #fafafa;
+  color: var(--primary);
 }
 
 .benefits-paragraph {
@@ -85,13 +85,15 @@
   height: 55px;
   font-size: 16px;
   font-weight: 500;
-  color: #fafafa;
+  color: var(--primary);
+  background-color: transparent;
   transition: 500ms ease-in-out;
+  cursor: pointer;
 }
 
 .benefits-button:hover {
-  background-color: #ed3b44;
-  border-color: #ed3b44;
+  background-color: var(--accent-hover);
+  border-color: var(--accent-hover);
 }
 
 /* /Phone Styles */
@@ -133,7 +135,6 @@
   .benefits-container {
     flex-direction: row;
     justify-content: space-between;
-    padding: 0;
   }
 
   .benefits-list-container {

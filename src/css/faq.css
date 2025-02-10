@@ -1,11 +1,11 @@
 .faq {
   max-width: 375px;
   margin: 0 auto;
+  padding-bottom: 64px;
 }
 
 .faq-container {
   padding: 0 16px;
-  padding-bottom: 64px;
 }
 
 .faq-title {
@@ -80,12 +80,12 @@
 
 @media only screen and (min-width: 768px) {
   .faq {
+    padding-bottom: 96px;
     max-width: 768px;
   }
 
   .faq-container {
     padding: 0 32px;
-    padding-bottom: 96px;
   }
 
   .faq .accordion-container .ac-header {
@@ -101,10 +101,10 @@
   .faq {
     max-width: 1440px;
     margin: 0 auto;
+    padding-bottom: 164px;
   }
   .faq-container {
     max-width: 1440px;
-    padding-bottom: 164px;
   }
 
   .faq .accordion-container {

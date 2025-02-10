@@ -167,7 +167,7 @@
 
   .projects-link:hover,
   .projects-link:focus {
-    background-color: #e0373f;
+    background-color: var(--accent-hover);
   }
 
   .projects-img-wrp {
@@ -195,7 +195,7 @@
   .projects-btn-prev:focus,
   .projects-btn-next:hover,
   .projects-btn-next:focus {
-    border: 1px solid #ffffff;
+    border: 1px solid var(--primary);
     box-shadow: 0px 0px 8px #fafafa66;
   }
 
