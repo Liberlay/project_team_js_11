@@ -7,6 +7,7 @@
 .reviews .container {
   padding: 0 16px;
 }
+
 .reviews-title {
   font-weight: 600;
   font-size: 16px;
@@ -35,7 +36,7 @@
   transition: transform 300ms ease-in-out, opacity 300ms ease-in-out;
 }
 
-.reviews-swiper-wrapper:hover > :not(:hover) {
+.reviews-swiper-wrapper:hover> :not(:hover) {
   transform: scale(0.7);
   opacity: 0.5;
 }
@@ -61,31 +62,16 @@
 }
 
 .reviews-text {
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 5;
   height: 120px;
   color: rgba(250, 250, 250, 0.6);
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: -0.02em;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--background-hero) var(--background);
 
-.reviews-text::-webkit-scrollbar {
-  width: 8px;
-}
-
-.reviews-text::-webkit-scrollbar-track {
-  background: var(--background);
-}
-
-.reviews-text::-webkit-scrollbar-thumb {
-  background-color: var(--background-hero);
-  border-radius: 20px;
-  border: 2px solid var(--background);
 }
 
 .reviews-swiper-btn-container {
@@ -103,10 +89,11 @@
   border-radius: 50%;
   border: 1px solid rgba(250, 250, 250, 0.5);
   background-color: transparent;
-  fill: none;
+  fill: transparent;
   stroke: var(--primary);
   padding: 14px;
   transition: border 300ms ease-in-out;
+  cursor: pointer;
 }
 
 /* Дизейбленные кнопки навигации */
@@ -118,7 +105,7 @@
   transition: opacity 300ms ease-in-out;
 }
 
-/*  hover/active */
+/* hover/active */
 .reviews-prev-btn:hover,
 .reviews-prev-btn:focus,
 .reviews-next-btn:hover,
@@ -129,7 +116,7 @@
 }
 
 .reviews-button-icon {
-  fill: none;
+  fill: transparent;
 }
 
 /* tablet */
