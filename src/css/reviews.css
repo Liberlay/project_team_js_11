@@ -63,8 +63,8 @@
 .reviews-text {
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 5;
-  height: 120px;
+  /* -webkit-line-clamp: 5; */
+  height: 170px;
   color: rgba(250, 250, 250, 0.6);
   font-weight: 500;
   font-size: 16px;
@@ -103,10 +103,11 @@
   border-radius: 50%;
   border: 1px solid rgba(250, 250, 250, 0.5);
   background-color: transparent;
-  fill: none;
+  fill: transparent;
   stroke: var(--primary);
   padding: 14px;
   transition: border 300ms ease-in-out;
+  cursor: pointer;
 }
 
 /* Дизейбленные кнопки навигации */
@@ -129,7 +130,7 @@
 }
 
 .reviews-button-icon {
-  fill: none;
+  fill: transparent;
 }
 
 /* tablet */
