@@ -20,6 +20,7 @@ menuItems.forEach(item => {
         block: 'start',
       });
     }
+    menuNav.classList.add('hidden');
   });
 });
 
